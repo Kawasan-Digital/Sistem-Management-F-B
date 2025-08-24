@@ -63,8 +63,12 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Dummy user data for demonstration
-const dummyUsers: User[] = [
+// Dummy user data for demonstration (with password for authentication)
+interface UserWithPassword extends User {
+  password: string;
+}
+
+const dummyUsers: UserWithPassword[] = [
   {
     id: '1',
     username: 'admin',
@@ -88,7 +92,7 @@ const dummyUsers: User[] = [
   },
 ];
 
-export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
   const login = async (username: string, password: string): Promise<boolean> => {

@@ -1,9 +1,7 @@
-import React from 'react';
 import { useApp } from '../context/AppContext';
 import { 
   ShoppingCart, 
   Utensils, 
-  Package, 
   TrendingUp,
   DollarSign,
   AlertTriangle

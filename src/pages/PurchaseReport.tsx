@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { format, startOfMonth, endOfMonth, isWithinInterval } from 'date-fns';
 import { id } from 'date-fns/locale';
-import { ShoppingCart, DollarSign, TrendingUp, Package } from 'lucide-react';
+import { ShoppingCart, TrendingUp, Package } from 'lucide-react';
 
 export default function PurchaseReport() {
   const { state } = useApp();

@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { format, startOfMonth, endOfMonth, isWithinInterval } from 'date-fns';
 import { id } from 'date-fns/locale';
-import { DollarSign, TrendingDown, AlertTriangle, FileText } from 'lucide-react';
+import { DollarSign, TrendingDown, FileText } from 'lucide-react';
 
 export default function ExpenseReport() {
   const { state } = useApp();
